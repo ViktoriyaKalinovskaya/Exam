@@ -27,8 +27,8 @@ class TomatoBush:
                 true.append(True)
             else:
                 true.append(False)
-        if False in true: print(False)
-        else: print(True)
+        if False in true: return False
+        else: return True
     def give_away_all(self):
         self.tomatoes.clear()
 
