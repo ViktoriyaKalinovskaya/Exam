@@ -25,6 +25,8 @@ class TomatoBush:
         for a in self.tomatoes:
             if a.is_ripe() == True:
                 true.append(True)
+            else:
+                true.append(False)
         if False in true: print(False)
         else: print(True)
     def give_away_all(self):
@@ -50,4 +52,7 @@ Gardener.knowledge_base()
 tomatoes = TomatoBush(5)
 gardener = Gardener('Maksim', tomatoes)
 gardener.work()
+gardener.harvest()
+while tomatoes.all_are_ripe() == False:
+    gardener.work()
 gardener.harvest()
